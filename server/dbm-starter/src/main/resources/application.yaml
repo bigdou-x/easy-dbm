@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  profiles:
+    active: dev
+  #  datasource:
+#    hikari:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      jdbc-url: jdbc:mysql://127.0.0.1:3306/dbm?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+#      username: root
+#      password: 123456
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/dbm?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
